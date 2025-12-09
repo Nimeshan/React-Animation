@@ -131,22 +131,34 @@ export default function HeroSection() {
             </div>
 
             <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-              <p style={{ fontSize: 20, lineHeight: 1.5, marginRight: -20, textAlign: "-khtml-left" }}>
-                Lusion is a digital production studio that brings your ideas to
-                life through visually captivating designs and interactive
-                experiences.
+              <p
+                style={{
+                  fontSize: 20,
+                  lineHeight: 1.5,
+                  maxWidth: "420px",
+                  textAlign: "left",
+                  marginBottom: 20,
+                  fontWeight: "normal",
+                }}
+              >
+              Lusion is a digital production studio that brings your ideas to life
+              through visually captivating designs and interactive experiences.
               </p>
 
               <button
                 style={{
-                  marginTop: 20,
-                  padding: "18px 30px",
-                  background: "white",
-                  borderRadius: 50,
+                  padding: "12px 28px",
+                  backgroundColor: "#FFFFFF",
+                  color: "#000000",
                   border: "none",
-                }}
-              >
-                ABOUT US
+                  borderRadius: "50px",
+                  fontSize: "16px",
+                  letterSpacing: "0.5px",
+                  boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.08)",
+                  cursor: "pointer",
+                  fontWeight: "normal",
+                }}>
+              ABOUT US
               </button>
             </div>
           </div>
