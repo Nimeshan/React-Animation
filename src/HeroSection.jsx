@@ -49,14 +49,14 @@ export default function HeroSection() {
     gsap.fromTo(
       container,
       {
-        x: -200,   // start off left
+        x: -400,   // start off left
         y: -100,   // start slightly above
         scale: 0.9,
         opacity: 0.5,
       },
       {
-        x: 0,      // move to normal horizontal position
-        y: 150,    // move down to center-ish
+        x: 250,      // move to normal horizontal position
+        y: 215,    // move down to center-ish
         scale: 1,
         opacity: 1,
         ease: "none",
