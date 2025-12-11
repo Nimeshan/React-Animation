@@ -42,28 +42,30 @@ export default function HeroSection() {
     return () => el.removeEventListener("scroll", onScroll);
   }, [pathLength]);
 
-  // Scroll-linked video animation: rise from below to center
+  // Scroll-linked video animation: left → right, down → center
   useEffect(() => {
     const container = videoContainerRef.current;
 
     gsap.fromTo(
       container,
       {
-        y: 400,        // start below
-        scale: 0.8,
-        opacity: 0.3,
+        x: -200,   // start off left
+        y: -100,   // start slightly above
+        scale: 0.9,
+        opacity: 0.5,
       },
       {
-        y: 0,          // move to normal position in layout
+        x: 0,      // move to normal horizontal position
+        y: 150,    // move down to center-ish
         scale: 1,
         opacity: 1,
         ease: "none",
         scrollTrigger: {
           trigger: container,
           scroller: scrollRef.current,
-          start: "top bottom",   // start when video enters bottom of viewport
-          end: "top center",     // end when video reaches center
-          scrub: true,           // fully scroll-linked
+          start: "top bottom",   
+          end: "top 40%",         // scroll distance to reach center
+          scrub: true,
         },
       }
     );
